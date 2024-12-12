@@ -1,6 +1,0 @@
-from parchis.JuegoParchis import Parchis
-
-
-def test_estadoCarrera0():
-    parchis = Parchis("Marco", "Hector")
-    assert parchis.estadoCarrera() == 0

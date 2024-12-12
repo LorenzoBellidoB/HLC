@@ -41,3 +41,12 @@ def test_avanzaPosicionesJ23():
     parchis.dado2 = 2
     parchis.avanzaPosiciones(2)
     assert parchis.fichaJ2 == 18
+
+def test_avanzaPosicionesJ14():
+    parchis.TAM_TABLERO = 10
+    parchis.fichaJ1 = 9
+    parchis.dado1 = 6
+    parchis.dado2 = 6
+    parchis.avanzaPosiciones(1)
+    assert parchis.fichaJ1 == 1
+
