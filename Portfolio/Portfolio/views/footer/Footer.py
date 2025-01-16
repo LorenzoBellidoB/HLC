@@ -10,9 +10,8 @@ def footer() -> rx.Component:
         "copyright",
         width="20px",
     ),
-    parrafo("2025", "#FFB43C"),
     rx.link(
-        "Pagina de Lorenzo Bellido",
+        f"{datetime.date.today().year} Pagina de Lorenzo Bellido",
         href="http/localhost:3000/",
         underline="none",
     )

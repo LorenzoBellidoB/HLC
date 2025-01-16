@@ -1,27 +1,27 @@
 import reflex as rx
 
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import Size, Color
 
-def titulo(text, color):
-    return rx.text(text,
+def titulo(texto, color):
+    return rx.text(texto,
                    font_family="'Jersey 15'", 
-                   size= Size.LARGE, 
+                   size= Size.LARGE.value, 
                    font_weight="bold",
                    color=color)
-def textoPrincipal(text, color):
-    return rx.text(text,
+def textoPrincipal(texto, color):
+    return rx.text(texto,
                    font_family="Tinos", 
-                   size= Size.LARGE, 
+                   size= Size.LARGE.value, 
                    color=color)
 
-def textoSecundario(text, color):
-    return rx.text(text,
+def textoSecundario(texto, color):
+    return rx.text(texto,
                    font_family="Tinos", 
-                   size= Size.MEDIUM, 
+                   size= Size.MEDIUM.value, 
                    color=color)
 
-def parrafo(text, color):
-    return rx.text(text,
+def parrafo(texto, color):
+    return rx.text(texto,
                    font_family="Source Serif 4", 
-                   size= Size.SMALL, 
+                   size= Size.SMALL.value, 
                    color=color)
