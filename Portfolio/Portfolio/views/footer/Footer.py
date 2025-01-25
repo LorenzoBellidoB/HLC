@@ -39,13 +39,17 @@ def footer() -> rx.Component:
             rx.icon(
         "copyright",
         width="20px",
+        color="white"
     ),
     rx.link(
         f"{datetime.date.today().year} Pagina de Lorenzo Bellido",
         href="http/localhost:3000/",
         color="white",
         underline="none",
-        style={":hover":{"color":"white"}}
+        _hover={
+                "color": "white",  # Mantén el texto blanco al pasar el ratón
+                "textDecoration": "underline",  # Asegúrate de que se subraye
+            },
     )
         ),
         align="center"

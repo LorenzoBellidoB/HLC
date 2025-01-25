@@ -18,7 +18,7 @@ def textoSecundario(texto, color):
     return rx.text(texto,
                    font_family="Tinos", 
                    size= Size.MEDIUM.value, 
-                   color=color)
+                   color=color,)
 
 def parrafo(texto, color):
     return rx.text(texto,
