@@ -33,7 +33,7 @@ class Color(Enum):
     # Colores adicionales
     ACCENT_TEAL = "#4FD1C5"  # Teal brillante, perfecto para acentos y detalles llamativos
     ACCENT_PINK = "#D53F8C"  # Rosa fucsia, ideal para elementos que necesitan resaltar
-    ACCENT_PURPLE = "#9B2C97"  # Morado intenso, utilizado para áreas interactivas o decorativas
+    ACCENT_PURPLE = "#AC1ECF"  # Morado intenso, utilizado para áreas interactivas o decorativas
     ACCENT_YELLOW = "#D69E2E"  # Amarillo mostaza para detalles importantes o llamados a la acción
     ACCENT_SUNSET = "#F6AD55"  # Naranja suave, menos vibrante pero igualmente llamativo
 

@@ -36,7 +36,7 @@ def buttonLink(text, url, color, text_color="white"):
             "width": "0%",
             "height": "100%",
             "background": dark_color,  # Color oscuro para el hover
-            "transition": "width 0.5s ease-out",  # Transición de izquierda a derecha
+            "transition": "width 0.6s ease-out",  # Transición de izquierda a derecha
             "z-index": "1",  # Asegura que esté debajo del texto
         },
         _hover={
