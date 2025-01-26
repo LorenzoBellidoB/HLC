@@ -1,10 +1,16 @@
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import Color, Size
 import reflex as rx
 def perfil():        
     return rx.box(
         rx.hstack(
             rx.image(src="https://img.a.transfermarkt.technology/portrait/header/602105-1680698738.jpg?lm=1", alt="Tu cara", width="50px", height="50px", border_radius="50%"),
-            rx.text("Lorenzo Bellido", font_size=Size.LARGE.value, font_weight="bold", color="white")
+            rx.text(
+                "Lorenzo Bellido", 
+                font_size=Size.LARGE.value, 
+                font_weight="bold", 
+                color=Color.TEXT_MEDIUM.value,
+                _hover=[{"cursor": "pointer"},{"text_decoration":"underline"},{"color":Color.TEXT_LIGHT.value}],
+                ),
         ),
         position="absolute",  # Fijar la posición
         top="20px",  # Asegura que esté un poco abajo del borde superior

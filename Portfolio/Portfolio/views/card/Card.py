@@ -1,7 +1,7 @@
 from Portfolio.styles.styles import Color
 import reflex as rx
 
-def card(titulo, descripcion, url,colorT,color, colorBg):
+def card(titulo, descripcion, url,colorT=Color.TEXT_MEDIUM.value,color=Color.TEXT_MEDIUM.value, colorBg=Color.BACKGROUND_NIGHT.value):
     return rx.card(
         rx.link(
             rx.flex(
@@ -15,7 +15,7 @@ def card(titulo, descripcion, url,colorT,color, colorBg):
                         no_of_lines=2  # Limitar el texto a 2 líneas para evitar overflow
                     ),
                 ),
-                spacing="4",  # Más espacio entre avatar y texto
+                spacing="4", 
                 align_items="center",
             ),
             href="#",  # Asegúrate de actualizar el enlace si es necesario
@@ -27,5 +27,5 @@ def card(titulo, descripcion, url,colorT,color, colorBg):
         box_shadow="5",  # Sombra para darle profundidad
         padding="4",  # Relleno interno
         bg=colorBg,  # Fondo blanco para contraste
-        _hover={"box_shadow": "xl", "transform": "scale(1.05)", "transition": "0.2s"},  # Animación al pasar el ratón
+        _hover={"box_shadow": "xl", "transform": "scale(1.05)", "transition": "0.2s","border": "2px solid white"},  # Animación al pasar el ratón
     )

@@ -50,23 +50,24 @@ def lenguajes():
     return rx.vstack(
          textoPrincipal("Lenguajes Conocidos", Color.TEXT_MEDIUM.value),
          rx.hstack(
-             card("Java", "Java es un lenguaje de programación orientado a objetos. ", "https://logodix.com/logo/283001.png"),
-             card("Python", "Python es un lenguaje de programación interpretado.", "https://logodix.com/logo/283001.png"),
-             card("C#", "C# .", "https://logodix.com/logo/283001.png"),
-             card("ASP.NET", "ASP.NET .", "https://logodix.com/logo/283001.png"),
-             card("Kotlin", "Kotlin .", "https://logodix.com/logo/283001.png"),
-             margin_top="20px",
-         ),
-         rx.hstack(
-             card("SQL", "SQL. ", "https://logodix.com/logo/283001.png"),
-             card(".NET MAUI", ".NET MAUI.", "https://logodix.com/logo/283001.png"),
-             card("JavaScript", "JavaScript.", "https://logodix.com/logo/283001.png"),
-             card("XAML", "XAML", "https://logodix.com/logo/283001.png"),
-             card("Angular", "Angular", "https://logodix.com/logo/283001.png"),
-             margin_top="20px",
-         ),
+    card("Java", "Java es un lenguaje de programación orientado a objetos.", "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"),
+    card("Python", "Python es un lenguaje de programación interpretado.", "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"),
+    card("C#", "C# es un lenguaje desarrollado por Microsoft.", "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png"),
+    card("ASP.NET", "ASP.NET es un framework desarrollado por Microsoft.", "https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_.NET_logo.png"),
+    card("Kotlin", "Kotlin es un lenguaje de programación estáticamente tipado.", "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png"),
+    margin_top="20px",
+),
+rx.hstack(
+    card("SQL", "SQL es un lenguaje de consulta para gestionar BBDD relacionales.", "https://seeklogo.com/images/A/azure-sql-database-logo-D7A32C9CD9-seeklogo.com.png"),
+    card(".NET MAUI", ".NET MAUI sirve para la creación de aplicaciones multiplataforma.", "https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_.NET_logo.png"),
+    card("JavaScript", "JavaScript es un lenguaje interpretado que se utiliza en el desarrollo web.", "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"),
+    card("Angular", "Angular es un framework de aplicaciones web de código abierto.", "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg"),
+    margin_top="20px",
+),
+
          width="66%",
          margin_top="60px",
+         align="center"
     )
 
 app = rx.App(
