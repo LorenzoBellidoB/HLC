@@ -10,6 +10,12 @@ class Size(Enum):
     MEDIUM = "5"
     LARGE = "8"
 
+class SizeText(Enum):
+    SMALL = "1px"
+    MEDIUM = "5px"
+    LARGE = "8px"
+    XL = "16px"
+
 # Colors
 class Color(Enum):
     # Colores para el fondo

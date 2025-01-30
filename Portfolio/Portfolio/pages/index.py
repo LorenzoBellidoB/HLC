@@ -14,7 +14,7 @@ class State(rx.State):
 
 
 @rx.page(
-        route = "/",
+        route = Routes.HOME.value,
 )
 
 def principal() -> rx.Component:

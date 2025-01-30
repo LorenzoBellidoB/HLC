@@ -1,10 +1,8 @@
-
-
 import reflex as rx
+from Portfolio.styles.styles import Color, Routes
 
 @rx.page(
-        route="/contact",
-
+    route=Routes.CONTACT.value,
 )
 
 def contact() -> rx.Component:
