@@ -11,6 +11,7 @@ def buttonLink(text, url, color, text_color="white"):
     # Oscurece el color inicial
     dark_color = darken_color(color, factor=0.7)
 
+
     return rx.button(
         rx.link(
             text,
