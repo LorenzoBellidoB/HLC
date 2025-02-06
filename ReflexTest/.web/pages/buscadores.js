@@ -15,16 +15,6 @@ import NextHead from "next/head"
 
 
 
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
 export function Link_361f4461742b48e332638142e53cc5a1 () {
   
   const ref_bing = useRef(null); refs["ref_bing"] = ref_bing;
@@ -42,23 +32,6 @@ export function Link_361f4461742b48e332638142e53cc5a1 () {
 {"Bing"}
 </NextLink>
 </RadixThemesLink>
-  )
-}
-
-export function Div_602c14884fa2de27f522fe8f94374b02 () {
-  
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-
-
-
-  
-  return (
-    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
-
-<Fragment_f2f0916d2fcc08b7cdf76cec697f0750/>
-</div>
   )
 }
 
@@ -86,6 +59,16 @@ export function Fragment_f2f0916d2fcc08b7cdf76cec697f0750 () {
   )
 }
 
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
 export function Link_503ac1760e2ce60944944833532693e8 () {
   
   const ref_volver = useRef(null); refs["ref_volver"] = ref_volver;
@@ -106,36 +89,23 @@ export function Link_503ac1760e2ce60944944833532693e8 () {
   )
 }
 
-export function Toaster_6e6ebf8d7ce589d59b7d382fb7576edf () {
+export function Link_ea11f6f0432d6de687109534062b2eab () {
   
-  const { resolvedColorMode } = useContext(ColorModeContext)
+  const ref_baidu = useRef(null); refs["ref_baidu"] = ref_baidu;
 
-  refs['__toast'] = toast
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-  const toast_props = ({ ["description"] : ("Check if server is reachable at "+getBackendURL(env.EVENT).href), ["closeButton"] : true, ["duration"] : 120000, ["id"] : "websocket-error" });
-  const [userDismissed, setUserDismissed] = useState(false);
-  (useEffect(
-() => {
-    if ((connectErrors.length >= 2)) {
-        if (!userDismissed) {
-            toast.error(
-                `Cannot connect to server: ${((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : '')}.`,
-                {...toast_props, onDismiss: () => setUserDismissed(true)},
-            )
-        }
-    } else {
-        toast.dismiss("websocket-error");
-        setUserDismissed(false);  // after reconnection reset dismissed state
-    }
-}
-, [connectErrors]))
 
 
 
 
   
   return (
-    <Toaster closeButton={false} expand={true} position={"bottom-right"} richColors={true} theme={resolvedColorMode}/>
+    <RadixThemesLink asChild={true} css={({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })} id={"baidu"} ref={ref_baidu}>
+
+<NextLink href={"https://www.baidu.com/"} passHref={true}>
+
+{"Baidu"}
+</NextLink>
+</RadixThemesLink>
   )
 }
 
@@ -156,6 +126,23 @@ export function Link_886c74d479208b5ad4664b632c05395c () {
 {"Google"}
 </NextLink>
 </RadixThemesLink>
+  )
+}
+
+export function Div_602c14884fa2de27f522fe8f94374b02 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+
+
+  
+  return (
+    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
+
+<Fragment_f2f0916d2fcc08b7cdf76cec697f0750/>
+</div>
   )
 }
 
@@ -196,23 +183,36 @@ export function Errorboundary_4416973599c9bb13cf5a6ebbd2418f3a () {
   )
 }
 
-export function Link_ea11f6f0432d6de687109534062b2eab () {
+export function Toaster_6e6ebf8d7ce589d59b7d382fb7576edf () {
   
-  const ref_baidu = useRef(null); refs["ref_baidu"] = ref_baidu;
+  const { resolvedColorMode } = useContext(ColorModeContext)
 
+  refs['__toast'] = toast
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+  const toast_props = ({ ["description"] : ("Check if server is reachable at "+getBackendURL(env.EVENT).href), ["closeButton"] : true, ["duration"] : 120000, ["id"] : "websocket-error" });
+  const [userDismissed, setUserDismissed] = useState(false);
+  (useEffect(
+() => {
+    if ((connectErrors.length >= 2)) {
+        if (!userDismissed) {
+            toast.error(
+                `Cannot connect to server: ${((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : '')}.`,
+                {...toast_props, onDismiss: () => setUserDismissed(true)},
+            )
+        }
+    } else {
+        toast.dismiss("websocket-error");
+        setUserDismissed(false);  // after reconnection reset dismissed state
+    }
+}
+, [connectErrors]))
 
 
 
 
   
   return (
-    <RadixThemesLink asChild={true} css={({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })} id={"baidu"} ref={ref_baidu}>
-
-<NextLink href={"https://www.baidu.com/"} passHref={true}>
-
-{"Baidu"}
-</NextLink>
-</RadixThemesLink>
+    <Toaster closeButton={false} expand={true} position={"bottom-right"} richColors={true} theme={resolvedColorMode}/>
   )
 }
 

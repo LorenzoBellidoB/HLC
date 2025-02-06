@@ -35,6 +35,30 @@ export function Link_053a1628d217c12bab990736f4420669 () {
   )
 }
 
+export function Fragment_f2f0916d2fcc08b7cdf76cec697f0750 () {
+  
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+
+
+  
+  return (
+    <Fragment>
+
+{isTrue((connectErrors.length > 0)) ? (
+  <Fragment>
+
+<LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
+  )
+}
+
 const pulse = keyframes`
     0% {
         opacity: 0;
@@ -44,6 +68,26 @@ const pulse = keyframes`
     }
 `
 
+
+export function Link_503ac1760e2ce60944944833532693e8 () {
+  
+  const ref_volver = useRef(null); refs["ref_volver"] = ref_volver;
+
+
+
+
+
+  
+  return (
+    <RadixThemesLink asChild={true} css={({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })} id={"volver"} ref={ref_volver}>
+
+<NextLink href={"/"} passHref={true}>
+
+{"Volver"}
+</NextLink>
+</RadixThemesLink>
+  )
+}
 
 export function Link_3b4026e4d3875554eacb8560a5acf97a () {
   
@@ -60,26 +104,6 @@ export function Link_3b4026e4d3875554eacb8560a5acf97a () {
 <NextLink href={"https://www.tiktok.com/explore"} passHref={true}>
 
 {"TikTok"}
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
-export function Link_13cd27feaf87ad22aa824cd36516e4d7 () {
-  
-  const ref_facebook = useRef(null); refs["ref_facebook"] = ref_facebook;
-
-
-
-
-
-  
-  return (
-    <RadixThemesLink asChild={true} css={({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })} id={"facebook"} ref={ref_facebook}>
-
-<NextLink href={"https://www.facebook.com/"} passHref={true}>
-
-{"Facebook"}
 </NextLink>
 </RadixThemesLink>
   )
@@ -122,6 +146,26 @@ export function Errorboundary_5d97f3b66e5f0689b9e724eb0c4efb00 () {
   )
 }
 
+export function Link_13cd27feaf87ad22aa824cd36516e4d7 () {
+  
+  const ref_facebook = useRef(null); refs["ref_facebook"] = ref_facebook;
+
+
+
+
+
+  
+  return (
+    <RadixThemesLink asChild={true} css={({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })} id={"facebook"} ref={ref_facebook}>
+
+<NextLink href={"https://www.facebook.com/"} passHref={true}>
+
+{"Facebook"}
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
 export function Div_602c14884fa2de27f522fe8f94374b02 () {
   
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -136,50 +180,6 @@ export function Div_602c14884fa2de27f522fe8f94374b02 () {
 
 <Fragment_f2f0916d2fcc08b7cdf76cec697f0750/>
 </div>
-  )
-}
-
-export function Fragment_f2f0916d2fcc08b7cdf76cec697f0750 () {
-  
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-
-
-
-  
-  return (
-    <Fragment>
-
-{isTrue((connectErrors.length > 0)) ? (
-  <Fragment>
-
-<LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
-  )
-}
-
-export function Link_503ac1760e2ce60944944833532693e8 () {
-  
-  const ref_volver = useRef(null); refs["ref_volver"] = ref_volver;
-
-
-
-
-
-  
-  return (
-    <RadixThemesLink asChild={true} css={({ ["&:hover"] : ({ ["color"] : "var(--accent-8)" }) })} id={"volver"} ref={ref_volver}>
-
-<NextLink href={"/"} passHref={true}>
-
-{"Volver"}
-</NextLink>
-</RadixThemesLink>
   )
 }
 
