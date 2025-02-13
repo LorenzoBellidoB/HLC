@@ -48,6 +48,7 @@ public class Prueba2 {
     	driver.get(FORM);
     	WebElement iNombre = driver.findElement(By.id("iNombre"));
     	assertEquals("text", iNombre.getAttribute("type"));
+    	assertEquals("50", iNombre.getAttribute("maxlength"));
     }
     
     @Test 
@@ -63,6 +64,7 @@ public class Prueba2 {
     	driver.get(FORM);
     	WebElement iApellidos = driver.findElement(By.id("iApellidos"));
     	assertEquals("text", iApellidos.getAttribute("type"));
+    	assertEquals("50", iApellidos.getAttribute("maxlength"));
     }
     
     @Test
@@ -86,8 +88,59 @@ public class Prueba2 {
             System.out.println(radio.getText());
         }
 
-        // Cerrar el navegador
-        driver.quit();
+    }
+    
+    @Test 
+    void verificarEntryCorreo() {
+    	driver.get(FORM);
+    	WebElement iCorreo = driver.findElement(By.id("iCorreo"));
+    	assertEquals("text", iCorreo.getAttribute("type"));
+    }
+    
+    @Test
+    void verificarLabelCorreo() {
+    	driver.get(FORM);
+    	WebElement lCorreo = driver.findElement(By.id("lCorreo"));
+    	String correo = lCorreo.getText();
+    	assertEquals("Correo",correo);
+    }
+    
+    @Test 
+    void verificarCheck() {
+    	driver.get(FORM);
+    	WebElement iCasilla = driver.findElement(By.id("iCasilla"));
+    	assertEquals("button", iCasilla.getAttribute("type"));
+    	assertEquals("true", iCasilla.getAttribute("aria-checked"));
+    }
+    
+    @Test
+    void verificarLabelCheck() {
+    	driver.get(FORM);
+    	WebElement lCasilla = driver.findElement(By.id("lCasilla"));
+    	String casilla = lCasilla.getText();
+    	assertEquals("Deseo recibir información sobre novedades y ofertas",casilla);
+    }
+    
+    @Test 
+    void verificarCheck2() {
+    	driver.get(FORM);
+    	WebElement iCasilla = driver.findElement(By.id("iCasilla2"));
+    	assertEquals("button", iCasilla.getAttribute("type"));
+    }
+    
+    @Test
+    void verificarLabelCheck2() {
+    	driver.get(FORM);
+    	WebElement lCasilla = driver.findElement(By.id("lCasilla2"));
+    	String casilla = lCasilla.getText();
+    	assertEquals("Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos",casilla);
+    }
+    
+    @Test 
+    void verificarButton() {
+    	driver.get(FORM);
+    	WebElement iButton = driver.findElement(By.id("iButton"));
+    	assertEquals("submit", iButton.getAttribute("type"));
     }
     
 }
